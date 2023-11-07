@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagination.css">
+    <title>pagination</title>
+</head>
+<!--  -->
+<body>
+    <div> <!-- all content -->
+        <div style="position:fixed;"> <!-- search icon/bar and the results are fixed -->
+            <div class="search"> <!-- search icon-bar -->
+                <div class="icon"></div>
+                <div class="input">
+                    <input type="text" id="search-input" placeholder="Type in episode number or title">
+                    <span class="clear" onclick="clearInput()"></span>
+                </div>
+            </div>
+            <div class="results-container" id="results"></div>
+        </div>
+
+
+        <div class="episodes-list">
+
+
+            <div id="pagination">
+                <button id="prev">Previous</button>
+                <button id="next">Next</button>
+            </div>
+
+
+            <div id="page1">
+                <div class="table-container"></div>
+            </div>
+
+            <div id="page2">
+                <h1>page 2</h1>
+                <div class="table-container"></div>
+            </div>
+
+            <div id="page3">
+                <h1>page 3</h1>
+                <div class="table-container"></div>
+            </div>
+
+            <div id="page4">
+                <h1 >page 4</h1>
+                <div class="table-container"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script type="module" src="anime-episodes.js"></script>
+    <script type="module" src="pagination.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+
+    <!-- things to add:
+- when the user is on page 1 and clicks "previous", user should be taken to the last page, so the pagination buttons should be infinite
+- when user is in page 2 and reloads the webpage, user should stay in current page, instead of getting redirected to page 1
+- when an img is added to page 1, for some reason is appears in all pages.
+- html content other than the tables shouldnt be pushed all the way down
+
+ -->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
