@@ -8,10 +8,14 @@
     <title>pagination</title>
 </head>
 <!--  -->
+
 <body>
-    <div> <!-- all content -->
-        <div style="position:fixed;"> <!-- search icon/bar and the results are fixed -->
-            <div class="search"> <!-- search icon-bar -->
+    <div>
+        <!-- all content -->
+        <div style="position:fixed;">
+            <!-- search icon/bar and the results are fixed -->
+            <div class="search">
+                <!-- search icon-bar -->
                 <div class="icon"></div>
                 <div class="input">
                     <input type="text" id="search-input" placeholder="Type in episode number or title">
@@ -36,7 +40,7 @@
             </div>
 
             <div id="page2">
-                <h1>page 2</h1>
+                <h1>2</h1>
                 <div class="table-container"></div>
             </div>
 
@@ -46,7 +50,7 @@
             </div>
 
             <div id="page4">
-                <h1 >page 4</h1>
+                <h1>page 4</h1>
                 <div class="table-container"></div>
             </div>
 
@@ -55,10 +59,11 @@
 
     </div>
 
-
     <script type="module" src="anime-episodes.js"></script>
+    <script type="module" src="episodes-data.js"></script>
     <script type="module" src="pagination.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+
 
     <!-- things to add:
 - when the user is on page 1 and clicks "previous", user should be taken to the last page, so the pagination buttons should be infinite

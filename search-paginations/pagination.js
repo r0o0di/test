@@ -1,5 +1,8 @@
 import episodes from './anime-episodes.js';
 import episodesData from './episodes-data.js';
+//import { metaphone } from './package-lock.json;
+
+
 
 const icon = document.querySelector(".icon");
 const search = document.querySelector(".search");
@@ -358,7 +361,7 @@ function generateEpisodeTable(episodeNumber) {
 
     // Adding table data
     const tbody = document.createElement("tbody");
-    episode.data.forEach(rowData => {
+    episode.bgm.forEach(rowData => {
       const row = document.createElement("tr");
       rowData.forEach(cellData => {
         const td = document.createElement("td");
@@ -439,4 +442,18 @@ function lazyLoadContent() {
 // Run the lazy load function on page load and scroll
 document.addEventListener('DOMContentLoaded', lazyLoadContent);
 window.addEventListener('scroll', lazyLoadContent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
