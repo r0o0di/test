@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Detection</title>
+    <style>
+        body {
+            transition: background-color 0.3s ease;
+        }
+
+        /* Light theme styles */
+        body.light {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Dark theme styles */
+        body.dark {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Function to apply theme based on user preference
+    function applyTheme(preferredTheme) {
+        const body = document.body;
+
+        if (preferredTheme === 'dark') {
+            body.classList.remove('light');
+            body.classList.add('dark');
+        } else {
+            body.classList.remove('dark');
+            body.classList.add('light');
+        }
+    }
+
+    // Check user's preferred color scheme
+    const userColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+    // Apply theme
+    applyTheme(userColorScheme);
+</script>
+
+<!-- Your website content goes here -->
+
+</body>
+</html>
